@@ -55,7 +55,7 @@ a {
   z-index: 20;
   backdrop-filter: blur(14px);
   background: linear-gradient(to bottom, var(--nav-bg), transparent);
-  border-bottom: 1px solid rgba(30, 64, 175, 0.45);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03); /* softened border to avoid strong blue line */
 }
 
 .navbar-inner {
@@ -224,9 +224,10 @@ a {
   position: absolute;
   inset: -80%;
   background:
-    radial-gradient(circle at 0 0, rgba(59, 130, 246, 0.22), transparent 55%),
-    radial-gradient(circle at 100% 0, rgba(34, 197, 94, 0.2), transparent 55%);
-  opacity: 0.7;
+    /* replace strong blue accents with very subtle green-tinted glows that blend with the background */
+    radial-gradient(circle at 0 0, rgba(34, 197, 94, 0.06), transparent 55%),
+    radial-gradient(circle at 100% 0, rgba(34, 197, 94, 0.03), transparent 55%);
+  opacity: 0.6;
   pointer-events: none;
 }
 
@@ -279,9 +280,8 @@ a {
   margin: 0 auto;
   padding: 1.9rem 1.6rem;
   border-radius: var(--radius-lg);
-  border: 1px solid rgba(148, 163, 184, 0.24);
-  background: radial-gradient(circle at top left, rgba(30, 64, 175, 0.3), transparent 50%),
-    rgba(15, 23, 42, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.03); /* make border very subtle */
+  background: rgba(15, 23, 42, 0.72); /* remove the blue radial and use a soft, blended background */
 }
 
 .section-title {
@@ -431,7 +431,7 @@ a {
     padding: 0.45rem 0;
     font-size: 0.93rem;
     color: var(--text-main);
-    border-bottom: 1px solid rgba(30, 64, 175, 0.35);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03); /* soften mobile link separators */
   }
 
   .nav-mobile-link:last-child {
