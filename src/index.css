@@ -414,7 +414,7 @@ a {
 .hero-full-text {
   max-width: none;
   margin:3rem;
-  padding: 1rem;
+  padding: 0;
 }
 
 .hero-title-large {
