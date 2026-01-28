@@ -16,10 +16,13 @@ export default function Navbar() {
   const [hidden, setHidden] = useState(false);
 
   useEffect(() => { 
-    const handleScroll = () => {fff
+    const handleScroll = () => {
       const triggerHeight = 95; // px from top before we hide navbar
       setHidden(window.scrollY > triggerHeight);
     };
+
+    // run once to set initial state
+    handleScroll();
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
