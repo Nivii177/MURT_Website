@@ -157,7 +157,7 @@ a {
   background: transparent;
   border: none;
   cursor: pointer;
-  padding: 0.25rem;
+  padding: 0.5rem; /* larger tap target */
 }
 
 .nav-toggle-bar {
@@ -333,18 +333,27 @@ a {
 }
 
 @media (max-width: 720px) {
+  /* Keep navbar visible on small screens for easier navigation */
+  .navbar--hidden {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
   .nav-links {
     display: none;
   }
 
   .nav-toggle {
     display: block;
+    margin-left: auto; /* push hamburger to far right */
   }
 
   .nav-mobile {
     display: flex;
     flex-direction: column;
-    padding: 0 1.5rem 0.75rem;
+    padding: 0.25rem 1.5rem 0.9rem;
+    background: rgba(3, 7, 18, 0.96);
+    border-top: 1px solid var(--border-subtle);
     gap: 0.3rem;
   }
 
@@ -362,6 +371,27 @@ a {
   .hero-actions {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .logo {
+    margin-left: 0.75rem;
+  }
+
+  .logo-img {
+    height: 60px;
+  }
+
+  .logo-text {
+    font-size: 0.85rem;
+    white-space: normal;
+  }
+
+  .section {
+    padding-inline: 0.9rem;
+  }
+
+  .section-inner {
+    padding: 1.4rem 1.1rem;
   }
 }
 
@@ -461,10 +491,10 @@ a {
 }
 
 .sponsor-card {
-  width: 7vw; /* Scale with viewport width */
-  height: 7vw; /* Maintain proportional height */
+  width: clamp(56px, 7vw, 96px); /* Keep readable size on phones */
+  height: clamp(56px, 7vw, 96px); /* Maintain proportional height */
   display: flex;
-  border-radius: 1.5vw; /* Adjust border radius */
+  border-radius: clamp(12px, 1.5vw, 18px); /* Responsive rounding */
   overflow: hidden;         /* IMPORTANT: hides image corners */
 }
 
@@ -480,6 +510,7 @@ body {
   padding: 0;
   background: #000;
   color: #fff;
+  overflow-x: hidden;
 }
 
 .about-page {
@@ -538,15 +569,21 @@ body {
 /* Mobile tweaks */
 @media (max-width: 768px) {
   .hero-full-inner {
-    padding-top: 5rem; /* for navbar space */
+    padding: 5rem 1.25rem 2.5rem; /* for navbar space + side padding */
   }
 
   .hero-title-large {
     font-size: 2.6rem;
+    white-space: normal;
+    line-height: 1.08;
   }
 
   .hero-subtitle-large {
     font-size: 1.2rem;
+  }
+
+  .hero-full-text {
+    margin: 1.5rem 0 0;
   }
 
   .sponsor-row {
@@ -556,6 +593,4 @@ body {
   .sponsor-pill {
     font-size: 0.75rem;
   }
-
-
 }
