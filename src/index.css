@@ -366,11 +366,6 @@ a {
 }
 
 
-/* Full-screen hero with video background */
-
-:root {
-  --navbar-height: 6rem; /* height reserved for the fixed navbar */
-}
 
 .hero-full {
   position: relative;
