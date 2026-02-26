@@ -333,7 +333,7 @@ a {
 }
 
 @media (max-width: 960px) {
-  /* Keep navbar visible on small screens for easier navigation */
+  /* Keep navbar visible on small/medium screens for easier navigation */
   .navbar--hidden {
     transform: translateY(0);
     opacity: 1;
@@ -345,7 +345,7 @@ a {
   }
 
   .nav-toggle {
-    display: block;
+    display: flex;
     margin-left: auto; /* push hamburger to far right */
   }
 
