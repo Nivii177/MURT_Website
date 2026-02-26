@@ -332,7 +332,7 @@ a {
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 960px) {
   /* Keep navbar visible on small screens for easier navigation */
   .navbar--hidden {
     transform: translateY(0);
