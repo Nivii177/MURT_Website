@@ -443,7 +443,7 @@ a {
 
 .hero-full-inner {
   max-width: 90%; /* Use percentage for dynamic width */
-  margin: -1rem; /* Use viewport height for vertical spacing */
+  margin: 0; /* Use viewport height for vertical spacing */
   padding: 6vh 2vw; /* Adjust padding to scale with viewport */
 }
 
