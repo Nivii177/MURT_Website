@@ -9,7 +9,7 @@ import Youssif from "../assets/Youssif.jpeg"
 import Haroon from "../assets/Haroon.jpeg"
 export const JOIN_URL = "#"; // Update with actual Discord/application link
 
-export const CONTACT_EMAIL = "rov.club@example.com"; // Update with actual email
+export const CONTACT_EMAIL = "murt@mcmaster.ca"; // Update with actual email
 
 export const WHAT_WE_DO = [
   {

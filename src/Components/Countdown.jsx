@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const COMPETITION_DATE = new Date("2026-06-25T00:00:00");
+const COMPETITION_DATE = new Date("2026-06-23T00:00:00");
 
 function getTimeLeft() {
   const diff = COMPETITION_DATE - Date.now();
