@@ -29,7 +29,7 @@ export default function Hero() {
           </p>
 
           <div className="hero-actions">
-            <a href="https://materovcompetition.org/" target = "_blank" className="btn btn-primary">
+            <a href="https://materovcompetition.org/2026" target = "_blank" className="btn btn-primary">
               Competion Details
             </a>
             <a href="#about" className="btn btn-secondary">
