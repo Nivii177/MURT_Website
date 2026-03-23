@@ -8,7 +8,7 @@ export default function Join() {
 
   return (
     <main className="app">
-      <section className="section" style={{ paddingTop: "calc(var(--navbar-height) + 2rem)" }}>
+      <section className="section" style={{ paddingTop: "2rem" }}>
         <div className="section-inner">
           <h1 className="section-title" style={{ fontSize: "2rem", marginBottom: "1.2rem" }}>
             Join the Team
@@ -37,36 +37,13 @@ export default function Join() {
 
       <Section id="what-you-learn" title="What You'll Learn">
         <p>As a team member, you'll gain hands-on experience in:</p>
-        <div style={{ 
-          display: "grid", 
-          gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", 
-          gap: "1.2rem", 
-          marginTop: "1.2rem" 
-        }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem", marginTop: "1.2rem" }}>
           {WHAT_YOU_LEARN.map((item, index) => (
-            <div
-              key={index}
-              style={{
-                padding: "1.4rem",
-                borderRadius: "var(--radius-lg)",
-                border: "1px solid rgba(148, 163, 184, 0.24)",
-                background: "radial-gradient(circle at top left, rgba(30, 64, 175, 0.2), transparent 50%), rgba(15, 23, 42, 0.6)"
-              }}
-            >
-              <h3 style={{ 
-                fontSize: "1.1rem", 
-                fontWeight: "600", 
-                margin: "0 0 0.6rem",
-                color: "var(--text-main)"
-              }}>
+            <div key={index}>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: "600", margin: "0 0 0.6rem", color: "var(--text-main)" }}>
                 {item.title}
               </h3>
-              <p style={{ 
-                fontSize: "0.9rem", 
-                lineHeight: "1.6", 
-                margin: "0",
-                color: "var(--text-muted)"
-              }}>
+              <p style={{ fontSize: "0.9rem", lineHeight: "1.6", margin: "0", color: "var(--text-muted)" }}>
                 {item.description}
               </p>
             </div>
@@ -83,11 +60,7 @@ export default function Join() {
           <li>Increased activity leading up to competition (spring)</li>
         </ul>
         <p style={{ marginTop: "1.2rem" }}><strong>Onboarding Process:</strong></p>
-        <ol style={{ 
-          margin: "0.2rem 0 0", 
-          paddingLeft: "1.5rem",
-          color: "var(--text-main)"
-        }}>
+        <ol style={{ margin: "0.2rem 0 0", paddingLeft: "1.5rem", color: "var(--text-main)" }}>
           <li style={{ marginBottom: "0.4rem" }}>Fill out our interest form or join our Discord</li>
           <li style={{ marginBottom: "0.4rem" }}>Attend a general meeting to learn about the team</li>
           <li style={{ marginBottom: "0.4rem" }}>Choose a subteam based on your interests</li>
@@ -100,46 +73,19 @@ export default function Join() {
         {FAQ_ITEMS.map((item, index) => (
           <div
             key={index}
-            style={{
-              marginTop: index > 0 ? "1.2rem" : "0",
-              padding: "1.2rem",
-              borderRadius: "var(--radius-lg)",
-              border: "1px solid rgba(148, 163, 184, 0.24)",
-              background: "rgba(15, 23, 42, 0.4)",
-              cursor: "pointer"
-            }}
+            style={{ marginTop: index > 0 ? "1rem" : "0", paddingBottom: "1rem", borderBottom: "1px solid rgba(148,163,184,0.12)", cursor: "pointer" }}
             onClick={() => setOpenFaq(openFaq === index ? null : index)}
           >
-            <div style={{ 
-              display: "flex", 
-              justifyContent: "space-between", 
-              alignItems: "flex-start",
-              gap: "1rem"
-            }}>
-              <h3 style={{ 
-                fontSize: "1rem", 
-                fontWeight: "600", 
-                margin: "0",
-                color: "var(--text-main)",
-                flex: "1"
-              }}>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: "1rem" }}>
+              <h3 style={{ fontSize: "1rem", fontWeight: "600", margin: "0", color: "var(--text-main)", flex: "1" }}>
                 {item.question}
               </h3>
-              <span style={{ 
-                color: "var(--text-muted)",
-                fontSize: "1.2rem",
-                userSelect: "none"
-              }}>
+              <span style={{ color: "var(--accent)", fontSize: "1.2rem", userSelect: "none" }}>
                 {openFaq === index ? "−" : "+"}
               </span>
             </div>
             {openFaq === index && (
-              <p style={{ 
-                fontSize: "0.9rem", 
-                lineHeight: "1.6", 
-                margin: "0.8rem 0 0",
-                color: "var(--text-muted)"
-              }}>
+              <p style={{ fontSize: "0.9rem", lineHeight: "1.6", margin: "0.8rem 0 0", color: "var(--text-muted)" }}>
                 {item.answer}
               </p>
             )}

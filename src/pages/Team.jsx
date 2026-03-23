@@ -1,11 +1,11 @@
 // src/pages/Team.jsx
 import Section from "../Components/Section.jsx";
-import { SUBTEAMS, TEAM_LEADS } from "../data/constants.js";
+import { TEAM_LEADS } from "../data/constants.js";
 
 export default function Team() {
   return (
     <main className="app">
-      <section className="section" style={{ paddingTop: "calc(var(--navbar-height) + 2rem)" }}>
+      <section className="section" style={{ paddingTop: "2rem" }}>
         <div className="section-inner">
           <h1 className="section-title" style={{ fontSize: "2rem", marginBottom: "1.2rem" }}>
             Our Team
@@ -16,108 +16,42 @@ export default function Team() {
         </div>
       </section>
 
-      <Section id="subteams" title="Subteams">
-        <p>Our team is organized into specialized subteams, each with clear responsibilities:</p>
-        
-        {SUBTEAMS.map((subteam, index) => (
-          <div key={index} style={{ marginTop: index > 0 ? "2rem" : "1.2rem" }}>
-            <h3 style={{ 
-              fontSize: "1.3rem", 
-              fontWeight: "600", 
-              margin: "0 0 0.8rem",
-              color: "var(--text-main)"
-            }}>
-              {subteam.name}
-            </h3>
-            <ul className="bullet-list">
-              {subteam.responsibilities.map((resp, idx) => (
-                <li key={idx}>{resp}</li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </Section>
-
-      <Section id="leads" title="Team Leads">
-        <p>Our subteam leads coordinate efforts and mentor team members:</p>
-        <div style={{ 
-          display: "grid", 
-          gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", 
-          gap: "1.2rem", 
-          marginTop: "1.2rem" 
-        }}>
+      <Section id="leads" title="Team Leadership">
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 220px))", gap: "2.5rem", marginTop: "1.5rem", justifyContent: "center" }}>
           {TEAM_LEADS.map((lead, index) => (
-            <div
-              key={index}
-              style={{
-                padding: "1.4rem",
-                borderRadius: "var(--radius-lg)",
-                border: "1px solid rgba(148, 163, 184, 0.24)",
-                background: "radial-gradient(circle at top left, rgba(30, 64, 175, 0.2), transparent 50%), rgba(15, 23, 42, 0.6)",
-                textAlign: "center"
-              }}
-            >
+            <div key={index} style={{ textAlign: "center" }}>
               {lead.photo ? (
-                <img 
-                  src={lead.photo} 
+                <img
+                  src={lead.photo}
                   alt={lead.name}
-                  style={{
-                    width: "80px",
-                    height: "80px",
-                    borderRadius: "50%",
-                    objectFit: "cover",
-                    margin: "0 auto 0.8rem",
-                    display: "block"
-                  }}
+                  style={{ width: "150px", height: "150px", borderRadius: "50%", objectFit: "cover", margin: "0 auto 1.2rem", display: "block" }}
                 />
               ) : (
-                <div
-                  style={{
-                    width: "80px",
-                    height: "80px",
-                    borderRadius: "50%",
-                    background: "rgba(148, 163, 184, 0.2)",
-                    margin: "0 auto 0.8rem",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    color: "var(--text-muted)",
-                    fontSize: "0.8rem"
-                  }}
-                >
+                <div style={{ width: "150px", height: "150px", borderRadius: "50%", background: "rgba(148, 163, 184, 0.15)", margin: "0 auto 1.2rem", display: "flex", alignItems: "center", justifyContent: "center", color: "var(--text-muted)", fontSize: "1rem" }}>
                   Photo
                 </div>
               )}
-              <h4 style={{ 
-                fontSize: "1rem", 
-                fontWeight: "600", 
-                margin: "0 0 0.4rem",
-                color: "var(--text-main)"
-              }}>
-                {lead.name}
-              </h4>
-              <p style={{ 
-                fontSize: "0.85rem", 
-                margin: "0",
-                color: "var(--text-muted)"
-              }}>
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "0.5rem", margin: "0 0 0.5rem" }}>
+                <h4 style={{ fontSize: "1.3rem", fontWeight: "600", margin: "0", color: "var(--text-main)" }}>
+                  {lead.name}
+                </h4>
+                {lead.linkedin && (
+                  <a href={lead.linkedin} target="_blank" rel="noreferrer" style={{ display: "flex", alignItems: "center", color: "var(--text-muted)", transition: "color 150ms ease" }}
+                    onMouseEnter={e => e.currentTarget.style.color = "#0a66c2"}
+                    onMouseLeave={e => e.currentTarget.style.color = "var(--text-muted)"}
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                  </a>
+                )}
+              </div>
+              <p style={{ fontSize: "1rem", margin: "0", color: "var(--text-muted)" }}>
                 {lead.role}
               </p>
             </div>
           ))}
         </div>
-      </Section>
-
-      <Section id="how-we-work" title="How We Work">
-        <p>We follow professional engineering practices to ensure quality and maintainability:</p>
-        <ul className="bullet-list">
-          <li><strong>GitHub:</strong> All code is version-controlled with clear commit messages and pull request reviews</li>
-          <li><strong>Code Reviews:</strong> Every change is reviewed by at least one other team member before merging</li>
-          <li><strong>Testing:</strong> We write tests for critical systems and validate hardware through systematic testing procedures</li>
-          <li><strong>Documentation:</strong> Technical documentation is maintained alongside code, including setup guides, architecture decisions, and design rationale</li>
-          <li><strong>Regular Meetings:</strong> Weekly subteam meetings and bi-weekly full team meetings keep everyone aligned</li>
-          <li><strong>Knowledge Sharing:</strong> Team members present on their work and teach others through workshops and documentation</li>
-        </ul>
       </Section>
     </main>
   );

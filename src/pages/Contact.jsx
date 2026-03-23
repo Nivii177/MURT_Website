@@ -4,24 +4,15 @@ import Section from "../Components/Section.jsx";
 import { CONTACT_EMAIL } from "../data/constants.js";
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: ""
-  });
+  const [formData, setFormData] = useState({ name: "", email: "", subject: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Front-end only form - create mailto link as fallback
     const mailtoLink = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)}`;
     window.location.href = mailtoLink;
     setSubmitted(true);
@@ -31,9 +22,29 @@ export default function Contact() {
     }, 3000);
   };
 
+  const inputStyle = {
+    width: "100%",
+    padding: "0.7rem 1rem",
+    borderRadius: "0.5rem",
+    border: "1px solid rgba(148, 163, 184, 0.2)",
+    background: "transparent",
+    color: "var(--text-main)",
+    fontSize: "0.9rem",
+    fontFamily: "inherit",
+    outline: "none",
+  };
+
+  const labelStyle = {
+    display: "block",
+    fontSize: "0.9rem",
+    fontWeight: "500",
+    marginBottom: "0.4rem",
+    color: "var(--text-main)",
+  };
+
   return (
     <main className="app">
-      <section className="section" style={{ paddingTop: "calc(var(--navbar-height) + 2rem)" }}>
+      <section className="section" style={{ paddingTop: "2rem" }}>
         <div className="section-inner">
           <h1 className="section-title" style={{ fontSize: "2rem", marginBottom: "1.2rem" }}>
             Get in Touch
@@ -47,148 +58,24 @@ export default function Contact() {
       <Section id="contact-form" title="Send Us a Message">
         <form onSubmit={handleSubmit} style={{ marginTop: "1rem" }}>
           <div style={{ marginBottom: "1.2rem" }}>
-            <label 
-              htmlFor="name" 
-              style={{ 
-                display: "block", 
-                fontSize: "0.9rem", 
-                fontWeight: "500", 
-                marginBottom: "0.4rem",
-                color: "var(--text-main)"
-              }}
-            >
-              Name *
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              required
-              value={formData.name}
-              onChange={handleChange}
-              style={{
-                width: "100%",
-                padding: "0.7rem 1rem",
-                borderRadius: "0.5rem",
-                border: "1px solid rgba(148, 163, 184, 0.3)",
-                background: "rgba(15, 23, 42, 0.6)",
-                color: "var(--text-main)",
-                fontSize: "0.9rem",
-                fontFamily: "inherit"
-              }}
-            />
+            <label htmlFor="name" style={labelStyle}>Name *</label>
+            <input type="text" id="name" name="name" required value={formData.name} onChange={handleChange} style={inputStyle} />
           </div>
-
           <div style={{ marginBottom: "1.2rem" }}>
-            <label 
-              htmlFor="email" 
-              style={{ 
-                display: "block", 
-                fontSize: "0.9rem", 
-                fontWeight: "500", 
-                marginBottom: "0.4rem",
-                color: "var(--text-main)"
-              }}
-            >
-              Email *
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              required
-              value={formData.email}
-              onChange={handleChange}
-              style={{
-                width: "100%",
-                padding: "0.7rem 1rem",
-                borderRadius: "0.5rem",
-                border: "1px solid rgba(148, 163, 184, 0.3)",
-                background: "rgba(15, 23, 42, 0.6)",
-                color: "var(--text-main)",
-                fontSize: "0.9rem",
-                fontFamily: "inherit"
-              }}
-            />
+            <label htmlFor="email" style={labelStyle}>Email *</label>
+            <input type="email" id="email" name="email" required value={formData.email} onChange={handleChange} style={inputStyle} />
           </div>
-
           <div style={{ marginBottom: "1.2rem" }}>
-            <label 
-              htmlFor="subject" 
-              style={{ 
-                display: "block", 
-                fontSize: "0.9rem", 
-                fontWeight: "500", 
-                marginBottom: "0.4rem",
-                color: "var(--text-main)"
-              }}
-            >
-              Subject *
-            </label>
-            <input
-              type="text"
-              id="subject"
-              name="subject"
-              required
-              value={formData.subject}
-              onChange={handleChange}
-              style={{
-                width: "100%",
-                padding: "0.7rem 1rem",
-                borderRadius: "0.5rem",
-                border: "1px solid rgba(148, 163, 184, 0.3)",
-                background: "rgba(15, 23, 42, 0.6)",
-                color: "var(--text-main)",
-                fontSize: "0.9rem",
-                fontFamily: "inherit"
-              }}
-            />
+            <label htmlFor="subject" style={labelStyle}>Subject *</label>
+            <input type="text" id="subject" name="subject" required value={formData.subject} onChange={handleChange} style={inputStyle} />
           </div>
-
           <div style={{ marginBottom: "1.2rem" }}>
-            <label 
-              htmlFor="message" 
-              style={{ 
-                display: "block", 
-                fontSize: "0.9rem", 
-                fontWeight: "500", 
-                marginBottom: "0.4rem",
-                color: "var(--text-main)"
-              }}
-            >
-              Message *
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              required
-              rows="6"
-              value={formData.message}
-              onChange={handleChange}
-              style={{
-                width: "100%",
-                padding: "0.7rem 1rem",
-                borderRadius: "0.5rem",
-                border: "1px solid rgba(148, 163, 184, 0.3)",
-                background: "rgba(15, 23, 42, 0.6)",
-                color: "var(--text-main)",
-                fontSize: "0.9rem",
-                fontFamily: "inherit",
-                resize: "vertical"
-              }}
-            />
+            <label htmlFor="message" style={labelStyle}>Message *</label>
+            <textarea id="message" name="message" required rows="6" value={formData.message} onChange={handleChange} style={{ ...inputStyle, resize: "vertical" }} />
           </div>
 
           {submitted && (
-            <div style={{
-              padding: "0.8rem",
-              marginBottom: "1rem",
-              borderRadius: "0.5rem",
-              background: "rgba(34, 197, 94, 0.2)",
-              border: "1px solid rgba(34, 197, 94, 0.4)",
-              color: "var(--text-main)",
-              fontSize: "0.9rem"
-            }}>
+            <div style={{ padding: "0.8rem", marginBottom: "1rem", borderRadius: "0.5rem", background: "rgba(250, 204, 21, 0.1)", border: "1px solid rgba(250, 204, 21, 0.3)", color: "var(--text-main)", fontSize: "0.9rem" }}>
               Message sent! We'll get back to you soon.
             </div>
           )}
@@ -207,12 +94,8 @@ export default function Contact() {
               {CONTACT_EMAIL}
             </a>
           </li>
-          <li>
-            <strong>Location:</strong> McMaster University, Hamilton, ON
-          </li>
-          <li>
-            <strong>Engineering Building:</strong> We're based in the Faculty of Engineering
-          </li>
+          <li><strong>Location:</strong> McMaster University, Hamilton, ON</li>
+          <li><strong>Engineering Building:</strong> We're based in the Faculty of Engineering</li>
         </ul>
       </Section>
 

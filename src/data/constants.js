@@ -1,6 +1,12 @@
 // src/data/constants.js
 // Centralized content data for easy editing
 
+
+import Nivindu from "../assets/Nivindu.jpeg"
+import Hasnat from "../assets/hasnat.jpg"
+import Haris from "../assets/Haris.jpeg"
+import Youssif from "../assets/Youssif.jpeg"
+import Haroon from "../assets/Haroon.jpeg"
 export const JOIN_URL = "#"; // Update with actual Discord/application link
 
 export const CONTACT_EMAIL = "rov.club@example.com"; // Update with actual email
@@ -81,11 +87,11 @@ export const SUBTEAMS = [
 ];
 
 export const TEAM_LEADS = [
-  { name: "Open Role", role: "Control Systems Lead", photo: null },
-  { name: "Open Role", role: "UI/Operator Station Lead", photo: null },
-  { name: "Open Role", role: "Vision/Perception Lead", photo: null },
-  { name: "Open Role", role: "Electrical Lead", photo: null },
-  { name: "Open Role", role: "Mechanical Lead", photo: null }
+  { name: "Nivindu De Silva", role: "Software Director", photo: Nivindu, linkedin: "https://www.linkedin.com/in/nivindu-de-silva/" },
+  { name: "Haris Ali", role: "Electrical Director", photo: Haris, linkedin: "https://www.linkedin.com/in/haris-ali-4aa252295/" },
+  { name: "Youssif Shaheed", role: "Mechanical Director", photo: Youssif, linkedin: "https://www.linkedin.com/in/youssif-shaheed/" },
+  { name: "Hasnat Saeed", role: "Marketing Director", photo: Hasnat, linkedin: "https://www.linkedin.com/in/hasnatsaeed/" },
+  { name: "Haroon Ahmed", role: "Operations Director", photo: Haroon, linkedin: "https://www.linkedin.com/in/haroon-ahmed04/" }
 ];
 
 export const SPONSOR_TIERS = [
