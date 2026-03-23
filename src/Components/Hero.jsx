@@ -1,5 +1,6 @@
-import bgVideo from "../assets/rov-hero.mov"; 
+import bgVideo from "../assets/rov-hero.mov";
 import mcmasterlogo from "../assets/mcenglogo.jpg";
+// import sponsor2logo from "../assets/sponsor2.png"; // ← add your image here
 export default function Hero() {
   return (
     <section className="hero-full" id="top">
@@ -41,13 +42,17 @@ export default function Hero() {
             <p className="powered-label">Powered By</p>
             <div className="sponsor-row">
               <div className="sponsor-card">
-               <a href="https://www.eng.mcmaster.ca/" target ="_blank"> 
-                 <img src={mcmasterlogo} alt="McMaster" />
-               </a>
+                <a href="https://www.eng.mcmaster.ca/" target="_blank">
+                  <img src={mcmasterlogo} alt="McMaster" />
+                </a>
               </div>
-              {/* <div className="sponsor-pill">Sponsor 1</div>
-              <div className="sponsor-pill">Sponsor 2</div>
-              <div className="sponsor-pill">Sponsor 3</div> */}
+              {/* Uncomment and update once you have the image and URL:
+              <div className="sponsor-card">
+                <a href="https://blu-sub.com/?srsltid=AfmBOoqAHTgIkB-E-hltcY3vkbbG4ydkzrd2nTioKKF96WZUb96oICdA" target="_blank">
+                  <img src={sponsor2logo} alt="Sponsor Name" />
+                </a>
+              </div>
+              */}
             </div>
           </div>
         </div>

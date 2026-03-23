@@ -10,7 +10,7 @@ export default function Join() {
     <main className="app">
       <section className="section" style={{ paddingTop: "2rem" }}>
         <div className="section-inner">
-          <h1 className="section-title" style={{ fontSize: "2rem", marginBottom: "1.2rem" }}>
+          <h1 className="section-title" style={{ marginBottom: "1.2rem" }}>
             Join the Team
           </h1>
           <p className="section-body" style={{ fontSize: "1.05rem", lineHeight: "1.7" }}>
