@@ -21,7 +21,7 @@ export default function Hero() {
         <div className="hero-full-text">
           <h1 className="hero-title hero-title-large">
             McMaster <br></br>
-            Underwater Robotics
+            Underwater Robotics Team
           </h1>
 
           <p className="hero-subtitle-large">
@@ -29,7 +29,7 @@ export default function Hero() {
           </p>
 
           <div className="hero-actions">
-            <a href="https://materovcompetition.org/2026" target = "_blank" className="btn btn-primary">
+            <a href="https://materovcompetition.org/2026" target = "_blank" className="btn btn-yellow">
               Competion Details
             </a>
             <a href="#about" className="btn btn-secondary">
