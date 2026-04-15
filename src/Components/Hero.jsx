@@ -7,12 +7,14 @@ export default function Hero() {
       {/* Background video */}
       <video
         className="hero-video"
-        src={bgVideo}
         autoPlay
         muted
         loop
         playsInline
-      />
+      >
+        <source src={bgVideo} type="video/mp4" />
+        <source src={bgVideo} type="video/quicktime" />
+      </video>
 
       {/* Dark overlay so text is readable */}
       <div className="hero-overlay" />
