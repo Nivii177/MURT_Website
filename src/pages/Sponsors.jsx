@@ -2,10 +2,22 @@
 import { Link } from "react-router-dom";
 import Section from "../Components/Section.jsx";
 import { SPONSOR_TIERS } from "../data/constants.js";
+import precisionlogo from "../assets/Precision_Logo.png";
 
 export default function Sponsors() {
   return (
     <main className="app">
+      <Section id="sponsors" title="Our Sponsors">
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "2rem", marginTop: "1.2rem" }}>
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0.75rem" }}>
+            <div style={{ width: "180px", height: "180px", borderRadius: "50%", overflow: "hidden", background: "transparent" }}>
+              <img src={precisionlogo} alt="Precision 3D Printing and Prototyping" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+            </div>
+            <p style={{ margin: 0, fontSize: "0.9rem", color: "var(--text-muted)", textAlign: "center" }}>Precision 3D Printing and Prototyping</p>
+          </div>
+        </div>
+      </Section>
+
       <section className="section" style={{ paddingTop: "2rem" }}>
         <div className="section-inner">
           <h1 className="section-title" style={{ marginBottom: "1.2rem" }}>
@@ -18,7 +30,7 @@ export default function Sponsors() {
       </section>
 
       <Section id="tiers" title="Sponsorship Tiers">
-        <p>Choose a sponsorship tier that fits your organization:</p>
+       
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.2rem", marginTop: "1.2rem" }}>
           {SPONSOR_TIERS.map((tier, index) => (
             <div key={index}>
@@ -46,17 +58,6 @@ export default function Sponsors() {
             <div key={title}>
               <h3 style={{ fontSize: "1.1rem", fontWeight: "600", margin: "0 0 0.6rem", color: "var(--text-main)" }}>{title}</h3>
               <p style={{ fontSize: "0.9rem", lineHeight: "1.6", margin: "0", color: "var(--text-muted)" }}>{desc}</p>
-            </div>
-          ))}
-        </div>
-      </Section>
-
-      <Section id="sponsors" title="Our Sponsors">
-        <p>We're grateful to our sponsors for their support:</p>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))", gap: "1.2rem", marginTop: "1.2rem" }}>
-          {[1, 2, 3, 4].map((item) => (
-            <div key={item} style={{ display: "flex", alignItems: "center", justifyContent: "center", minHeight: "120px", color: "var(--text-muted)", fontSize: "0.85rem", textAlign: "center", borderBottom: "1px solid rgba(148,163,184,0.1)" }}>
-              Your logo here
             </div>
           ))}
         </div>

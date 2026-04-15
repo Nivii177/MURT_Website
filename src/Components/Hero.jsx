@@ -1,6 +1,6 @@
 import bgVideo from "../assets/rov-hero.mov";
 import mcmasterlogo from "../assets/mcenglogo.jpg";
-// import sponsor2logo from "../assets/sponsor2.png"; // ← add your image here
+import precisionlogo from "../assets/Precision_Logo.png";
 export default function Hero() {
   return (
     <section className="hero-full" id="top">
@@ -33,7 +33,7 @@ export default function Hero() {
             <a href="https://materovcompetition.org/2026" target = "_blank" className="btn btn-yellow">
               Competion Details
             </a>
-            <a href="#about" className="btn btn-secondary">
+            <a href="#about" className="btn btn-yellow">
               About Us
             </a>
           </div>
@@ -46,13 +46,9 @@ export default function Hero() {
                   <img src={mcmasterlogo} alt="McMaster" />
                 </a>
               </div>
-              {/* Uncomment and update once you have the image and URL:
               <div className="sponsor-card">
-                <a href="https://blu-sub.com/?srsltid=AfmBOoqAHTgIkB-E-hltcY3vkbbG4ydkzrd2nTioKKF96WZUb96oICdA" target="_blank">
-                  <img src={sponsor2logo} alt="Sponsor Name" />
-                </a>
+                <img src={precisionlogo} alt="Precision 3D Printing and Prototyping" />
               </div>
-              */}
             </div>
           </div>
         </div>
