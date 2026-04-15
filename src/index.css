@@ -382,13 +382,6 @@ a {
 }
 
 @media (max-width: 960px) {
-  /* Keep navbar visible on small/medium screens for easier navigation */
-  .navbar--hidden {
-    transform: translateY(0);
-    opacity: 1;
-    pointer-events: auto;
-  }
-
   .nav-links {
     display: none;
   }

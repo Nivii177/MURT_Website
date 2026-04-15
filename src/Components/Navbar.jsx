@@ -16,7 +16,7 @@ export default function Navbar() {
 
   useEffect(() => { 
     const handleScroll = () => {
-      const triggerHeight = 95; // px from top before we hide navbar
+      const triggerHeight = 50; // px from top before we hide navbar
       setHidden(window.scrollY > triggerHeight);
     };
 
