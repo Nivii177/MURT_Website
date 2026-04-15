@@ -49,7 +49,9 @@ export default function Hero() {
                 </a>
               </div>
               <div className="sponsor-card">
-                <img src={precisionlogo} alt="Precision 3D Printing and Prototyping" />
+                <a href="https://precision3dprint.ca/" target="_blank" rel="noreferrer">
+                  <img src={precisionlogo} alt="Precision 3D Printing and Prototyping" />
+                </a>
               </div>
             </div>
           </div>
