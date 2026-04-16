@@ -1,6 +1,7 @@
 import bgVideo from "../assets/rov-hero.mov";
 import mcmasterlogo from "../assets/mcenglogo.jpg";
 import precisionlogo from "../assets/Precision_Logo.png";
+import meslogo from "../assets/mes.png";
 export default function Hero() {
   return (
     <section className="hero-full" id="top">
@@ -51,6 +52,11 @@ export default function Hero() {
               <div className="sponsor-card">
                 <a href="https://precision3dprint.ca/" target="_blank" rel="noreferrer">
                   <img src={precisionlogo} alt="Precision 3D Printing and Prototyping" />
+                </a>
+              </div>
+              <div className="sponsor-card">
+                <a href="https://macengsociety.ca/" target="_blank" rel="noreferrer">
+                  <img src={meslogo} alt="McMaster Engineering Society" />
                 </a>
               </div>
             </div>
