@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.murt.ca/</loc>
+    <loc>https://www.macmurt.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.murt.ca/team</loc>
+    <loc>https://www.macmurt.com/team</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.murt.ca/sponsors</loc>
+    <loc>https://www.macmurt.com/sponsors</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.murt.ca/join</loc>
+    <loc>https://www.macmurt.com/join</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.murt.ca/contact</loc>
+    <loc>https://www.macmurt.com/contact</loc>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
