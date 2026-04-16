@@ -1,7 +1,6 @@
 // src/components/Navbar.jsx
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/logo2.png"; // or whatever your logo path is
 
 const navLinks = [
   { href: "/team", label: "Team" },
@@ -34,7 +33,7 @@ export default function Navbar() {
     <header className={`navbar ${hidden ? "navbar--hidden" : ""}`}>
       <div className="navbar-inner">
         <Link to="/" className="logo">
-          <img src={logo} alt="ROV Logo" className="logo-img" />
+          <img src="/logo2.png" alt="ROV Logo" className="logo-img" />
           <span className="logo-text">MCMASTER UNDERWATER ROBOTICS TEAM</span>
         </Link>
 
