@@ -539,16 +539,21 @@ a {
   font-size: 0.8rem;
 }
 
+.sponsor-card,
+.sponsor-logo-circle {
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
 .sponsor-card {
   width: clamp(68px, 8.5vw, 115px);
   height: clamp(68px, 8.5vw, 115px);
   display: flex;
   border-radius: clamp(12px, 1.5vw, 18px);
   overflow: hidden;
-  transition: transform 200ms ease, box-shadow 200ms ease;
 }
 
-.sponsor-card:hover {
+.sponsor-card:hover,
+.sponsor-logo-circle:hover {
   transform: translateY(-4px) scale(1.05);
   box-shadow: 0 8px 24px rgba(250, 204, 21, 0.3);
 }

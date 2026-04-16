@@ -10,7 +10,7 @@ export default function Sponsors() {
       <Section id="sponsors" title="Our Sponsors">
         <div style={{ display: "flex", flexWrap: "wrap", gap: "2rem", marginTop: "1.2rem" }}>
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0.75rem" }}>
-            <div style={{ width: "180px", height: "180px", borderRadius: "50%", overflow: "hidden", background: "transparent" }}>
+            <div className="sponsor-logo-circle" style={{ width: "180px", height: "180px", borderRadius: "50%", overflow: "hidden", background: "transparent" }}>
               <a href="https://precision3dprint.ca/" target="_blank" rel="noreferrer">
                 <img src={precisionlogo} alt="Precision 3D Printing and Prototyping" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
               </a>
