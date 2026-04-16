@@ -528,7 +528,7 @@ a {
 .sponsor-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 1vw; /* Use viewport width for spacing */
+  gap: 2vw; /* Use viewport width for spacing */
 }
 
 .sponsor-pill {
