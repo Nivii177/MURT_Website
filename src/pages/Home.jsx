@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main className="app">
       <Helmet>
-        <title>McMaster Underwater Robotics Team</title>
+        <title>MAC UNDERWATER ROBOTICS TEAM</title>
         <meta name="description" content="McMaster Underwater Robotics Team (MURT) is a MES-affiliated student engineering club at McMaster University building custom ROVs to compete in the MATE ROV Competition." />
         <link rel="canonical" href="https://www.macmurt.com/" />
       </Helmet>
