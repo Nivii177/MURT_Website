@@ -1,10 +1,16 @@
 // src/pages/Home.jsx
+import { Helmet } from "react-helmet-async";
 import Hero from "../Components/Hero.jsx";
 import Countdown from "../Components/Countdown.jsx";
 
 export default function Home() {
   return (
     <main className="app">
+      <Helmet>
+        <title>McMaster Underwater Robotics Team</title>
+        <meta name="description" content="MURT is a McMaster University student team building underwater robots to compete in the MATE ROV Competition." />
+        <link rel="canonical" href="https://www.macmurt.com/" />
+      </Helmet>
       <Hero />
 
       <section id="about" className="about-home">

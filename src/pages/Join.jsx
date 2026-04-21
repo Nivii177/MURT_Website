@@ -1,5 +1,6 @@
 // src/pages/Join.jsx
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import Section from "../Components/Section.jsx";
 import { WHAT_YOU_LEARN, FAQ_ITEMS, JOIN_URL } from "../data/constants.js";
 
@@ -8,6 +9,11 @@ export default function Join() {
 
   return (
     <main className="app">
+      <Helmet>
+        <title>Join the Team | McMaster Underwater Robotics Team</title>
+        <meta name="description" content="Join MURT — McMaster's student robotics team. No experience needed. We welcome engineers, designers, and anyone passionate about robotics." />
+        <link rel="canonical" href="https://www.macmurt.com/join" />
+      </Helmet>
       <section className="section" style={{ paddingTop: "2rem" }}>
         <div className="section-inner">
           <h1 className="section-title" style={{ marginBottom: "1.2rem" }}>

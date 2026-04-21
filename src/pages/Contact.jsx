@@ -1,10 +1,16 @@
 // src/pages/Contact.jsx
+import { Helmet } from "react-helmet-async";
 import Section from "../Components/Section.jsx";
 import { CONTACT_EMAIL } from "../data/constants.js";
 
 export default function Contact() {
   return (
     <main className="app">
+      <Helmet>
+        <title>Contact | McMaster Underwater Robotics Team</title>
+        <meta name="description" content="Get in touch with MURT. Reach out about sponsorships, joining the team, or general inquiries. Based at McMaster University, Hamilton, ON." />
+        <link rel="canonical" href="https://www.macmurt.com/contact" />
+      </Helmet>
       <section className="section" style={{ paddingTop: "2rem" }}>
         <div className="section-inner">
           <h1 className="section-title" style={{ marginBottom: "1.2rem" }}>

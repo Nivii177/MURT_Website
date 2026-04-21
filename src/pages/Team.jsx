@@ -1,4 +1,5 @@
 // src/pages/Team.jsx
+import { Helmet } from "react-helmet-async";
 import Section from "../Components/Section.jsx";
 import { TEAM_LEADS } from "../data/constants.js";
 
@@ -13,6 +14,11 @@ const SUBTEAMS = [
 export default function Team() {
   return (
     <main className="app">
+      <Helmet>
+        <title>Our Team | McMaster Underwater Robotics Team</title>
+        <meta name="description" content="Meet the student engineers behind MURT — our directors and subteams spanning software, electrical, mechanical, marketing, and operations." />
+        <link rel="canonical" href="https://www.macmurt.com/team" />
+      </Helmet>
       <section className="section" style={{ paddingTop: "2rem" }}>
         <div className="section-inner">
           <h1 className="section-title" style={{ marginBottom: "1.2rem" }}>

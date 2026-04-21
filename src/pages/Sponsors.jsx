@@ -1,4 +1,5 @@
 // src/pages/Sponsors.jsx
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import Section from "../Components/Section.jsx";
 import { SPONSOR_TIERS } from "../data/constants.js";
@@ -6,6 +7,11 @@ import { SPONSOR_TIERS } from "../data/constants.js";
 export default function Sponsors() {
   return (
     <main className="app">
+      <Helmet>
+        <title>Sponsors | McMaster Underwater Robotics Team</title>
+        <meta name="description" content="Support MURT by sponsoring our student robotics team. View our sponsorship tiers and current sponsors helping us compete at the MATE ROV Competition." />
+        <link rel="canonical" href="https://www.macmurt.com/sponsors" />
+      </Helmet>
       <Section id="sponsors" title="Our Sponsors">
         <div style={{ display: "flex", flexWrap: "wrap", gap: "2rem", marginTop: "1.2rem" }}>
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0.75rem" }}>
