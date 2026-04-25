@@ -8,8 +8,7 @@ export default function Sponsors() {
   return (
     <main className="app">
       <Helmet>
-        <title>Sponsors | McMaster Underwater Robotics Team</title>
-        <meta name="description" content="Support MURT by sponsoring our student robotics team. View our sponsorship tiers and current sponsors helping us compete at the MATE ROV Competition." />
+<meta name="description" content="Support MURT by sponsoring our student robotics team. View our sponsorship tiers and current sponsors helping us compete at the MATE ROV Competition." />
         <link rel="canonical" href="https://www.macmurt.com/sponsors" />
       </Helmet>
       <Section id="sponsors" title="Our Sponsors">

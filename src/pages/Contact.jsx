@@ -7,8 +7,7 @@ export default function Contact() {
   return (
     <main className="app">
       <Helmet>
-        <title>Contact | McMaster Underwater Robotics Team</title>
-        <meta name="description" content="Get in touch with MURT. Reach out about sponsorships, joining the team, or general inquiries. Based at McMaster University, Hamilton, ON." />
+<meta name="description" content="Get in touch with MURT. Reach out about sponsorships, joining the team, or general inquiries. Based at McMaster University, Hamilton, ON." />
         <link rel="canonical" href="https://www.macmurt.com/contact" />
       </Helmet>
       <section className="section" style={{ paddingTop: "2rem" }}>
