@@ -15,7 +15,8 @@ export default function Team() {
   return (
     <main className="app">
       <Helmet>
-<meta name="description" content="Meet the student engineers behind MURT — our directors and subteams spanning software, electrical, mechanical, marketing, and operations." />
+        <title>MAC UNDERWATER ROBOTICS TEAM</title>
+        <meta name="description" content="Meet the student engineers behind MURT — our directors and subteams spanning software, electrical, mechanical, marketing, and operations." />
         <link rel="canonical" href="https://www.macmurt.com/team" />
       </Helmet>
       <section className="section" style={{ paddingTop: "2rem" }}>
