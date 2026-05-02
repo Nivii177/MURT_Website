@@ -64,7 +64,7 @@ function Model() {
 export default function ROVModel() {
   return (
     <div className="rov-model-wrapper">
-      <Canvas camera={{ position: [-2, 3, 2.5], fov: 80 }}>
+      <Canvas camera={{ position: [-2, 3, 2.5], fov: 80 }} gl={{ alpha: true }} style={{ background: "transparent" }}>
         <Suspense fallback={null}>
           <ambientLight intensity={0.8} />
           <directionalLight position={[5, 5, 5]} intensity={1.2} />
