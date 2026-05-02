@@ -597,7 +597,7 @@ body {
   top: 50%;
   transform: translateY(-50%);
   width: 50%;
-  height: 55vw;
+  height: clamp(600px, 90vw, 1560px);
 }
 
 .about-home-title {
