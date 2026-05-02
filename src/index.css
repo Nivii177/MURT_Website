@@ -575,12 +575,28 @@ body {
 
 .about-home {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
   padding: 4rem 2.5rem 6rem 5rem;
   margin-top: 6rem;
   color: var(--text-main);
   scroll-margin-top: var(--navbar-height);
+  overflow: visible;
+}
+
+.about-text {
+  flex: 0 1 auto;
+  z-index: 1;
+}
+
+.about-model {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%;
+  height: 1560px;
 }
 
 .about-home-title {
@@ -636,7 +652,39 @@ body {
   background: rgba(250, 204, 21, 0.06);
 }
 
+.rov-model-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  cursor: grab;
+}
+
+.rov-model-wrapper:active {
+  cursor: grabbing;
+}
+
+.rov-model-hint {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  pointer-events: none;
+  margin: 0;
+}
+
 @media (max-width: 768px) {
+  .about-home {
+    flex-direction: column;
+  }
+
+  .about-model {
+    flex: none;
+    width: 100%;
+    height: 320px;
+  }
+
   .about-home {
     padding: 4rem 1.5rem;
   }

@@ -10,7 +10,7 @@ export default function Join() {
   return (
     <main className="app">
       <Helmet>
-        <title>MAC UNDERWATER ROBOTICS TEAM</title>
+        <title>MAC UNDERWATER ROBOTICS</title>
         <meta name="description" content="Join MURT — McMaster's student robotics team. No experience needed. We welcome engineers, designers, and anyone passionate about robotics." />
         <link rel="canonical" href="https://www.macmurt.com/join" />
       </Helmet>
