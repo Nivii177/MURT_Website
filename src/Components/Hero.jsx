@@ -55,6 +55,11 @@ export default function Hero() {
                   <img src="/Precision_Logo.png" alt="Precision 3D Printing and Prototyping" />
                 </a>
               </div>
+              <div className="sponsor-card">
+                <a href="https://www.altium.com/" target="_blank" rel="noreferrer">
+                  <img src="/altium.png" alt="Altium" />
+                </a>
+              </div>
             </div>
           </div>
         </div>

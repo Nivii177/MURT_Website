@@ -22,6 +22,14 @@ export default function Sponsors() {
             </div>
             <p style={{ margin: 0, fontSize: "0.9rem", color: "var(--text-muted)", textAlign: "center" }}>Precision 3D Printing and Prototyping</p>
           </div>
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0.75rem" }}>
+            <div className="sponsor-logo-circle" style={{ width: "180px", height: "180px", borderRadius: "50%", overflow: "hidden", background: "transparent" }}>
+              <a href="https://www.altium.com/" target="_blank" rel="noreferrer">
+                <img src="/altium.png" alt="Altium" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+              </a>
+            </div>
+            <p style={{ margin: 0, fontSize: "0.9rem", color: "var(--text-muted)", textAlign: "center" }}>Altium</p>
+          </div>
         </div>
       </Section>
 
