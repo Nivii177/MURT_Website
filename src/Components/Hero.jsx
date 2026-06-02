@@ -60,6 +60,11 @@ export default function Hero() {
                   <img src="/altium.png" alt="Altium" />
                 </a>
               </div>
+              <div className="sponsor-card">
+                <a href="https://blu-sub.com/" target="_blank" rel="noreferrer">
+                  <img src="/BlueSub.png" alt="Blue Sub Mechatronics" />
+                </a>
+              </div>
             </div>
           </div>
         </div>

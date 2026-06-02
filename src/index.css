@@ -553,10 +553,10 @@ a {
 }
 
 .sponsor-card {
-  width: clamp(68px, 8.5vw, 115px);
-  height: clamp(68px, 8.5vw, 115px);
+  width: clamp(48px, 6vw, 80px);
+  height: clamp(48px, 6vw, 80px);
   display: flex;
-  border-radius: clamp(12px, 1.5vw, 18px);
+  border-radius: clamp(9px, 1.2vw, 14px);
   overflow: hidden;
 }
 

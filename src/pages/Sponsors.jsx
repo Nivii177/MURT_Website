@@ -30,6 +30,14 @@ export default function Sponsors() {
             </div>
             <p style={{ margin: 0, fontSize: "0.9rem", color: "var(--text-muted)", textAlign: "center" }}>Altium</p>
           </div>
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0.75rem" }}>
+            <div className="sponsor-logo-circle" style={{ width: "180px", height: "180px", borderRadius: "50%", overflow: "hidden", background: "transparent" }}>
+              <a href="https://blu-sub.com/" target="_blank" rel="noreferrer">
+                <img src="/BlueSub.png" alt="Blue Sub Mechatronics" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+              </a>
+            </div>
+            <p style={{ margin: 0, fontSize: "0.9rem", color: "var(--text-muted)", textAlign: "center" }}>Blue Sub Mechatronics</p>
+          </div>
         </div>
       </Section>
 

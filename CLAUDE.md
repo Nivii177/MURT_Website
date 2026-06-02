@@ -165,8 +165,9 @@ Body background is pure `#000000`.
 | McMaster Engineering Society (MES) | `/mes.png` | https://macengsociety.ca/ |
 | Precision 3D Printing and Prototyping | `/Precision_Logo.png` | https://precision3dprint.ca/ |
 | Altium | `/altium.png` | https://www.altium.com/ |
+| Blue Sub Mechatronics | `/BlueSub.png` | https://blu-sub.com/ |
 
-Order in Hero "Powered By" row: McMaster Eng → MES → Precision 3D → Altium.
+Order in Hero "Powered By" row: McMaster Eng → MES → Precision 3D → Altium → Blue Sub Mechatronics.
 
 ---
 
