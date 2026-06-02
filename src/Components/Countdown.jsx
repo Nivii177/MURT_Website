@@ -29,12 +29,16 @@ export default function Countdown() {
   ];
 
   return (
-    <section className="countdown-section">
+    <section className="countdown-section" data-reveal="fade">
       <p className="countdown-label">Time until the 2026 MATE ROV World Championship</p>
       <div className="countdown-grid">
         {units.map(({ label, value }) => (
           <div key={label} className="countdown-unit">
-            <span className="countdown-value">{String(value).padStart(2, "0")}</span>
+            <span className="countdown-value">
+              <span key={value} className="countdown-digit">
+                {String(value).padStart(2, "0")}
+              </span>
+            </span>
             <span className="countdown-unit-label">{label}</span>
           </div>
         ))}

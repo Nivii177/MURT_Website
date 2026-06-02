@@ -7,6 +7,63 @@
   animation: pageEnter 0.4s ease-out both;
 }
 
+/* ─── Scroll reveal ──────────────────────────────────── */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+[data-reveal="left"]  { transform: translateX(-32px); }
+[data-reveal="right"] { transform: translateX(32px); }
+[data-reveal="scale"] { transform: scale(0.92); }
+[data-reveal="fade"]  { transform: none; }
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+[data-delay="1"].is-visible { transition-delay: 0.08s; }
+[data-delay="2"].is-visible { transition-delay: 0.16s; }
+[data-delay="3"].is-visible { transition-delay: 0.24s; }
+[data-delay="4"].is-visible { transition-delay: 0.32s; }
+[data-delay="5"].is-visible { transition-delay: 0.40s; }
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] { opacity: 1 !important; transform: none !important; transition: none !important; }
+}
+
+/* ─── Hero entrance stagger ─────────────────────────── */
+@keyframes heroSlideUp {
+  from { transform: translateY(36px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+/* ─── Countdown digit flip ──────────────────────────── */
+@keyframes digitFlip {
+  from { transform: translateY(-35%) scaleY(0.7); opacity: 0; }
+  to   { transform: translateY(0)    scaleY(1);   opacity: 1; }
+}
+.countdown-digit {
+  display: inline-block;
+  animation: digitFlip 0.3s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* ─── FAQ smooth expand ─────────────────────────────── */
+.faq-body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.25s ease;
+  opacity: 0;
+}
+.faq-body > * { overflow: hidden; }
+.faq-body.is-open {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
 :root {
   --bg: #020617;
   --bg-elevated: #020617;
@@ -294,6 +351,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  animation: heroSlideUp 0.9s 0.28s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .btn-yellow:hover {
@@ -509,12 +567,14 @@ a {
   white-space: nowrap;
   line-height: 1.02;
   font-weight: 800;
+  animation: heroSlideUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .hero-subtitle-large {
   font-size: clamp(1.2rem, 3vw, 2rem); /* Adjust subtitle size */
   margin-top: 0.3rem;
   margin-bottom: 2rem;
+  animation: heroSlideUp 0.9s 0.15s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .hero-subtitle {
@@ -525,6 +585,7 @@ a {
 
 .hero-powered {
   margin-top: 2rem;
+  animation: heroSlideUp 0.9s 0.44s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .powered-label {

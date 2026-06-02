@@ -16,8 +16,8 @@ export default function Home() {
 
       <section id="about" className="about-home">
         <div className="about-text">
-          <h2 className="about-home-title">About the Club</h2>
-          <p>
+          <h2 className="about-home-title" data-reveal="left">About the Club</h2>
+          <p data-reveal="left" data-delay="1">
             The <strong>McMaster Underwater Robotics Team (MURT)</strong> is a
             student engineering club at <strong>McMaster University</strong> in
             Hamilton, Ontario, proudly affiliated with the{" "}
@@ -29,7 +29,7 @@ export default function Home() {
             operations, united by a passion for robotics and real-world
             engineering.
           </p>
-          <div className="about-badges">
+          <div className="about-badges" data-reveal="left" data-delay="2">
             {[
               { label: "MES Affiliated" },
               { label: "McMaster University" },

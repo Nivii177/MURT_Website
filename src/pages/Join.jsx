@@ -16,10 +16,10 @@ export default function Join() {
       </Helmet>
       <section className="section" style={{ paddingTop: "2rem" }}>
         <div className="section-inner">
-          <h1 className="section-title" style={{ marginBottom: "1.2rem" }}>
+          <h1 className="section-title" style={{ marginBottom: "1.2rem" }} data-reveal>
             Join the Team
           </h1>
-          <p className="section-body" style={{ fontSize: "1.05rem", lineHeight: "1.7" }}>
+          <p className="section-body" style={{ fontSize: "1.05rem", lineHeight: "1.7" }} data-reveal data-delay="1">
             We're always looking for passionate students who want to build real robots and solve challenging engineering problems. No prior experience required—we'll teach you everything you need to know.
           </p>
           <div className="cta-row" style={{ marginTop: "1.5rem" }}>
@@ -45,7 +45,7 @@ export default function Join() {
         <p>As a team member, you'll gain hands-on experience in:</p>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem", marginTop: "1.2rem" }}>
           {WHAT_YOU_LEARN.map((item, index) => (
-            <div key={index}>
+            <div key={index} data-reveal data-delay={String(index + 1)}>
               <h3 style={{ fontSize: "1.1rem", fontWeight: "600", margin: "0 0 0.6rem", color: "var(--text-main)" }}>
                 {item.title}
               </h3>
@@ -81,20 +81,22 @@ export default function Join() {
             key={index}
             style={{ marginTop: index > 0 ? "1rem" : "0", paddingBottom: "1rem", borderBottom: "1px solid rgba(148,163,184,0.12)", cursor: "pointer" }}
             onClick={() => setOpenFaq(openFaq === index ? null : index)}
+            data-reveal
+            data-delay={String((index % 4) + 1)}
           >
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: "1rem" }}>
               <h3 style={{ fontSize: "1rem", fontWeight: "600", margin: "0", color: "var(--text-main)", flex: "1" }}>
                 {item.question}
               </h3>
-              <span style={{ color: "var(--accent)", fontSize: "1.2rem", userSelect: "none" }}>
-                {openFaq === index ? "−" : "+"}
+              <span style={{ color: "var(--accent)", fontSize: "1.2rem", userSelect: "none", transition: "transform 0.3s ease", transform: openFaq === index ? "rotate(45deg)" : "rotate(0deg)" }}>
+                +
               </span>
             </div>
-            {openFaq === index && (
+            <div className={`faq-body${openFaq === index ? " is-open" : ""}`}>
               <p style={{ fontSize: "0.9rem", lineHeight: "1.6", margin: "0.8rem 0 0", color: "var(--text-muted)" }}>
                 {item.answer}
               </p>
-            )}
+            </div>
           </div>
         ))}
       </Section>

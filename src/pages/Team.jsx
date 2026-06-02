@@ -21,14 +21,14 @@ export default function Team() {
       </Helmet>
       <section className="section" style={{ paddingTop: "2rem" }}>
         <div className="section-inner">
-          <h1 className="section-title" style={{ marginBottom: "1.2rem" }}>
+          <h1 className="section-title" style={{ marginBottom: "1.2rem" }} data-reveal>
             Our Team
           </h1>
-          <p className="section-body" style={{ fontSize: "1.05rem", lineHeight: "1.7" }}>
+          <p className="section-body" style={{ fontSize: "1.05rem", lineHeight: "1.7" }} data-reveal data-delay="1">
             We are a multidisciplinary team of engineering students working together to design, build, and compete with underwater robots. Our team combines expertise in software, electrical, mechanical, and systems engineering to create a complete ROV system from scratch.
           </p>
 
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem", marginTop: "2rem" }}>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem", marginTop: "2rem" }} data-reveal data-delay="2">
             {SUBTEAMS.map(({ name, icon }) => (
               <div key={name} style={{ display: "flex", alignItems: "center", gap: "0.5rem", padding: "0.6rem 1.2rem", borderRadius: "999px", border: "1px solid rgba(250, 204, 21, 0.3)", color: "var(--text-main)", fontSize: "1rem" }}>
                 <span>{icon}</span>
@@ -42,7 +42,7 @@ export default function Team() {
       <Section id="leads" title="Team Leadership">
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 220px))", gap: "2.5rem", marginTop: "1.5rem", justifyContent: "center" }}>
           {TEAM_LEADS.map((lead, index) => (
-            <div key={index} style={{ textAlign: "center" }}>
+            <div key={index} style={{ textAlign: "center" }} data-reveal="scale" data-delay={String(index + 1)}>
               {lead.photo ? (
                 <img
                   src={lead.photo}
