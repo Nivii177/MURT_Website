@@ -1,5 +1,4 @@
 // src/App.jsx
-import { useEffect } from "react";
 import Navbar from "./Components/Navbar.jsx";
 import Footer from "./Components/Footer.jsx";
 import PageTransition from "./Components/PageTransition.jsx";
@@ -12,24 +11,6 @@ import Contact from "./pages/Contact.jsx";
 
 export default function App() {
   const location = useLocation();
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
-    );
-    const id = setTimeout(() => {
-      document.querySelectorAll("[data-reveal]").forEach((el) => observer.observe(el));
-    }, 80);
-    return () => { clearTimeout(id); observer.disconnect(); };
-  }, [location.pathname]);
 
   return (
     <>

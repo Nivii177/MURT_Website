@@ -13,10 +13,10 @@ export default function Contact() {
       </Helmet>
       <section className="section" style={{ paddingTop: "2rem" }}>
         <div className="section-inner">
-          <h1 className="section-title" style={{ marginBottom: "1.2rem" }} data-reveal>
+          <h1 className="section-title" style={{ marginBottom: "1.2rem" }}>
             Get in Touch
           </h1>
-          <p className="section-body" style={{ fontSize: "1.05rem", lineHeight: "1.7" }} data-reveal data-delay="1">
+          <p className="section-body" style={{ fontSize: "1.05rem", lineHeight: "1.7" }}>
             Have questions about the team, want to sponsor us, or interested in joining? We'd love to hear from you!
           </p>
         </div>
