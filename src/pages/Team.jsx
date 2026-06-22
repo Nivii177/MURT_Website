@@ -15,7 +15,7 @@ export default function Team() {
   return (
     <main className="app">
       <Helmet>
-        <title>MAC UNDERWATER ROBOTICS</title>
+        <title>MAC UNDERWATER ROBOTICS TEAM</title>
         <meta name="description" content="Meet the student engineers behind MURT — our directors and subteams spanning software, electrical, mechanical, marketing, and operations." />
         <link rel="canonical" href="https://www.macmurt.com/team" />
       </Helmet>
