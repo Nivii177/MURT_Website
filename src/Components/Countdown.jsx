@@ -30,7 +30,7 @@ export default function Countdown() {
 
   return (
     <section className="countdown-section">
-      <p className="countdown-label">Time until the 2026 MATE ROV World Championship</p>
+      <p className="countdown-label">Time until the 2027 MATE ROV World Championship</p>
       <div className="countdown-grid">
         {units.map(({ label, value }) => (
           <div key={label} className="countdown-unit">
