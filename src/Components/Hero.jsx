@@ -65,6 +65,11 @@ export default function Hero() {
                   <img src="/BlueSub.png" alt="Blue Sub Mechatronics" />
                 </a>
               </div>
+              <div className="sponsor-card">
+                <a href="https://www.eclipseautomation.com/" target="_blank" rel="noreferrer">
+                  <img src="/eclipse.png" alt="Eclipse Automation" />
+                </a>
+              </div>
             </div>
           </div>
         </div>
