@@ -88,7 +88,7 @@ export const SUBTEAMS = [
 
 export const TEAM_LEADS = [
   { name: "Nivindu De Silva", role: "Software Director", photo: Nivindu, linkedin: "https://www.linkedin.com/in/nivindu-de-silva/" },
-  { name: "Haris Ali", role: "Electrical Director", photo: Haris, linkedin: "https://www.linkedin.com/in/haris-ali-4aa252295/" },
+  { name: "Haris Ali", role: "Firmware Director", photo: Haris, linkedin: "https://www.linkedin.com/in/haris-ali-4aa252295/" },
   { name: "Youssif Shaheed", role: "Mechanical Director", photo: Youssif, linkedin: "https://www.linkedin.com/in/youssif-shaheed/" },
   { name: "Hasnat Saeed", role: "Marketing Director", photo: Hasnat, linkedin: "https://www.linkedin.com/in/hasnatsaeed/" },
   { name: "Haroon Ahmed", role: "Operations Director", photo: Haroon, linkedin: "https://www.linkedin.com/in/haroon-ahmed04/" }
