@@ -3,10 +3,11 @@
 
 
 import Nivindu from "../assets/Nivindu.jpeg"
-import Hasnat from "../assets/hasnat.jpg"
+import Fareeha from "../assets/blank.png"
 import Haris from "../assets/Haris.jpeg"
 import Youssif from "../assets/Youssif.jpeg"
 import Haroon from "../assets/Haroon.jpeg"
+import ZhiWei from "../assets/Zhi.jpeg"
 export const JOIN_URL = "#"; // Update with actual Discord/application link
 
 export const CONTACT_EMAIL = "murt@mcmaster.ca"; // Update with actual email
@@ -89,8 +90,9 @@ export const SUBTEAMS = [
 export const TEAM_LEADS = [
   { name: "Nivindu De Silva", role: "Software Director", photo: Nivindu, linkedin: "https://www.linkedin.com/in/nivindu-de-silva/" },
   { name: "Haris Ali", role: "Firmware Director", photo: Haris, linkedin: "https://www.linkedin.com/in/haris-ali-4aa252295/" },
-  { name: "Youssif Shaheed", role: "Mechanical Director", photo: Youssif, linkedin: "https://www.linkedin.com/in/youssif-shaheed/" },
-  { name: "Hasnat Saeed", role: "Marketing Director", photo: Hasnat, linkedin: "https://www.linkedin.com/in/hasnatsaeed/" },
+  { name: "Youssif Shaheed", role: "Mechanical Co-Director", photo: Youssif, linkedin: "https://www.linkedin.com/in/youssif-shaheed/" },
+  { name: "Zhi Wei", role: "Mechanical Co-Director", photo: ZhiWei, linkedin: "https://www.linkedin.com/in/zhiweizhang27/" },
+  { name: "Fareeha Iqbal", role: "Marketing Director", photo: Fareeha, linkedin: "https://www.linkedin.com/in/fareeha-iqbal-656278334/" },
   { name: "Haroon Ahmed", role: "Operations Director", photo: Haroon, linkedin: "https://www.linkedin.com/in/haroon-ahmed04/" }
 ];
 
